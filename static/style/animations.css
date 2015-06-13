@@ -1,0 +1,46 @@
+@keyframes slide-down-from-top-while-fading-in {
+  /* line 3, /Users/daniel/Desktop/personal-website/static/style/animations.scss */
+  from {
+    margin-top: -10%;
+    opacity: 0; }
+
+  /* line 7, /Users/daniel/Desktop/personal-website/static/style/animations.scss */
+  to {
+    margin-top: 0;
+    opacity: 1; } }
+
+@keyframes fade-in-live-background {
+  /* line 14, /Users/daniel/Desktop/personal-website/static/style/animations.scss */
+  from {
+    opacity: 0; }
+
+  /* line 17, /Users/daniel/Desktop/personal-website/static/style/animations.scss */
+  to {
+    opacity: .5; } }
+
+@keyframes fade-in {
+  /* line 23, /Users/daniel/Desktop/personal-website/static/style/animations.scss */
+  from {
+    opacity: 0; }
+
+  /* line 26, /Users/daniel/Desktop/personal-website/static/style/animations.scss */
+  to {
+    opacity: 1; } }
+
+/* line 32, /Users/daniel/Desktop/personal-website/static/style/animations.scss */
+.header.sticky {
+  animation: 1s slide-down-from-top-while-fading-in ease-in; }
+
+/* line 35, /Users/daniel/Desktop/personal-website/static/style/animations.scss */
+.header.expanded .inner-container {
+  animation: 3s fade-in; }
+
+/* line 38, /Users/daniel/Desktop/personal-website/static/style/animations.scss */
+#live-background {
+  animation: 8s fade-in-live-background cubic-bezier(0.13, 0.52, 0.67, 0.17); }
+
+/* line 42, /Users/daniel/Desktop/personal-website/static/style/animations.scss */
+h1, h2, h3, p {
+  animation: 3s fade-in; }
+
+/*# sourceMappingURL=animations.css.map */

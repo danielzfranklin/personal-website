@@ -1,0 +1,26 @@
+$background-color-1: hsla(242, 100%, 13%, 1);
+$background-color-2: hsla(242, 65%, 10%, 1);
+$text-color-1: hsla(236, 16%, 40%, 1);
+$text-color-2: hsla(236, 8%, 54%, 1);
+
+.header{
+	color: $text-color-2;
+	background-color: $background-color-2;
+}
+	#live-background{
+		opacity: .5;
+	}
+	.header-placeholder{
+		background-color: $background-color-2;
+	}
+
+.content-background{
+	background-color: $background-color-1;
+}
+	.content{
+		color: $text-color-1;
+	}
+
+	a{
+		color: hsla(236, 29%, 54%, 1);
+	}

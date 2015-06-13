@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "typograpy.css",
+  "sources": [
+    "typograpy.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": ";AAAA;EACC,AAAW;EACX,AAAY;EAEZ;IAJD;MAKE,AAAW;EAEZ;IAPD;MAQE,AAAW;;;AAGb;EACC,AAAW;EACX,AAAY;;;AAEb;EACC,AAAW;EACX,AAAY;EACZ,AAAe;;;AAGhB;EACC,AAAa;EACb,AAAW;EACX,AAAa;EACb,AAAY;;;AAGb;EACC,AAAa;;;AAGd;EACC,AAAY;;;AAGb;EACC,AAAiB;;EAElB,AAAC;IACC,AAAiB",
+  "names": []
+}
