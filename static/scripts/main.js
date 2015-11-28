@@ -13,6 +13,9 @@
         })
         .when("/books/:id", {
             templateUrl: "s/pages/books/book.html"
+        })
+        .when("/contact", {
+            templateUrl: "s/pages/contact/contact.html"
         });
             
         $locationProvider.html5Mode(true);
