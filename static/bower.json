@@ -1,0 +1,16 @@
+{
+  "name": "personal-website",
+  "description": "Daniel Franklin's Personal Website",
+  "authors": [
+    "Daniel Franklin"
+  ],
+  "license": "UNLICENSED",
+  "homepage": "https://github.com/danielzfranklin/personal-website",
+  "moduleType": [],
+  "private": true,
+  "dependencies": {
+    "normalize-css": "normalize.css#~3.0.3",
+    "angular": "~1.4.8",
+    "angular-material": "~0.11.4"
+  }
+}
