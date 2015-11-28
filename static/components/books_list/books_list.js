@@ -49,7 +49,6 @@
                     }
                 });
                 
-                console.log(_this.books);
             }],
             controllerAs: "books"
         };
