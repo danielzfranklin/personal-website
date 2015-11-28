@@ -5,9 +5,13 @@ api_version: 1
 threadsafe: yes
 
 handlers:
-- url: /s/(.+)
+- url: /static/(.+)
   static_files: static/\1
   upload: static/(.*)
+  
+- url: /bower_components/(.+)
+  static_files: bower_components/\1
+  upload: bower_components/(.*)
 
 - url: /api/(.+)
   script: api.app

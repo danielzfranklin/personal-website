@@ -6,7 +6,7 @@
         return {
             restrict: "E",
             replace: true,
-            templateUrl: "s/components/contact/contact.html",
+            templateUrl: "static/components/contact/contact.html",
             controller: ["$http", "$scope", function($http, $scope){
                 var _this = this;
                 

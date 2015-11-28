@@ -6,16 +6,16 @@
             
         $routeProvider
         .when("/", {
-            templateUrl: "s/pages/home/index.html"
+            templateUrl: "static/pages/home/index.html"
         })
         .when("/books", {
-            templateUrl: "s/pages/books/books.html"
+            templateUrl: "static/pages/books/books.html"
         })
         .when("/books/:id", {
-            templateUrl: "s/pages/books/book.html"
+            templateUrl: "static/pages/books/book.html"
         })
         .when("/contact", {
-            templateUrl: "s/pages/contact/contact.html"
+            templateUrl: "static/pages/contact/contact.html"
         });
             
         $locationProvider.html5Mode(true);

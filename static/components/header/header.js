@@ -4,7 +4,7 @@
         return {
             restrict: "E",
             replace: true,
-            templateUrl: "s/components/header/header.html"
+            templateUrl: "static/components/header/header.html"
         };
     });
 }());

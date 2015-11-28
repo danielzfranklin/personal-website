@@ -8,7 +8,7 @@
                 "list": "=",
                 "small": "="
             },
-            templateUrl: "s/components/books_list/books_list.html",
+            templateUrl: "static/components/books_list/books_list.html",
             controller: ["$scope", "$http", "google_books", function($scope, $http, google_books){
                 var _this = this;
                 
