@@ -17,7 +17,7 @@
                 
                 // number of books to show (if less than # books shows link to more page)
                 if($scope.small){
-                    _this.show_number = 4;
+                    _this.show_number = 5;
                 }
                 else{
                     _this.show_number = list.length; // default show number

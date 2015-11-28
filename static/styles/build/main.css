@@ -24,6 +24,13 @@
   margin-right: auto;
   padding: 16px; }
 
+.md-subheader {
+  padding-top: 10px; }
+  .md-subheader .md-subheader-inner {
+    padding-left: 0; }
+  .md-subheader .md-subheader-content {
+    font-size: 20px; }
+
 .header .content {
   padding: 20px; }
   .header .content .name {
