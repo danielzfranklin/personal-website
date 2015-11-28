@@ -11,6 +11,10 @@
   "dependencies": {
     "normalize-css": "normalize.css#~3.0.3",
     "angular": "~1.4.8",
-    "angular-material": "~0.11.4"
+    "angular-material": "~0.11.4",
+    "angular-route": "~1.4.8",
+    "angular-sanitize": "~1.4.8",
+    "google-material-color": "~1.2.6",
+    "sass-material-colors": "~0.0.5"
   }
 }

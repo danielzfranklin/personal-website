@@ -1,3 +1,60 @@
+/**
+ * Retrieves a color value from the $material-colors Sass map
+ * Inspired by https://github.com/nilskaspersson/Google-Material-UI-Color-Palette/
+ *
+ * @function
+ * @param {string} color-name             - quoted, lower-case, dasherized color
+ *                                          name (e.g. 'pink', 'amber')
+ * @param {string} [color-variant='500']  - quoted, lowercase color variant (e.g.
+ *                                          '200', 'a100')
+ */
+.page_content_container {
+  position: relative; }
 
+.page_content {
+  position: absolute;
+  width: 100%;
+  top: -80px;
+  z-index: 5; }
 
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJtYWluLmNzcyJ9 */
+.page_content_inner {
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 16px; }
+
+.header .content {
+  padding: 20px; }
+  .header .content .name {
+    padding: 0;
+    margin: 0;
+    font-size: 25px;
+    text-align: right; }
+    .header .content .name a {
+      color: #FFF;
+      text-decoration: none; }
+.header .overlap_spacer {
+  height: 80px; }
+
+.books_list .book {
+  margin: 10px;
+  display: inline-block; }
+  .books_list .book .inner {
+    background-size: cover;
+    height: 127.33px;
+    width: 85.33px; }
+.books_list .more {
+  display: inline-block; }
+  .books_list .more a {
+    color: #616161; }
+
+.individual_book .image {
+  float: left;
+  padding: 0 30px 20px 0; }
+
+.home_page .etch_vs_scratch_image {
+  display: block;
+  padding: 20px; }
+
+/*# sourceMappingURL=main.css.map */

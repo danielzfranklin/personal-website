@@ -1,0 +1,12 @@
+<section class="books_list">
+    <md-subheader>Books I've Read Recently</md-subheader>
+    <div class="book" ng-repeat="book in books.books.slice(0, books.show_number)">
+        <a ng-href="/books/{{ book.id }}">
+            <div class="inner" style="background-image:url({{ book.imageLinks.smallThumbnail }})"></div>
+        </a>
+    </div>
+    <div class="more" ng-if="books.books.length > books.show_number">
+        <a href="/books">more</a>
+    </div>
+    </div>
+</section>

@@ -3,6 +3,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks("grunt-contrib-sass");
     grunt.loadNpmTasks("grunt-postcss");
     grunt.loadNpmTasks("grunt-wiredep");
+    grunt.loadNpmTasks("grunt-contrib-watch");
     
     grunt.initConfig({
         sass: {
@@ -31,10 +32,20 @@ module.exports = function(grunt){
         },
         wiredep: {
             target: {
-                src: "pages/index.html"
+                src: "pages/index.html",
+                ignorePath: "../"
+            }
+        },
+        watch: {
+            sass: {
+                files: ["**/*.sass"],
+                tasks: ["sass", "postcss:dist"],
+                options: {
+                    spawn: false
+                }
             }
         }
     });
     
-    grunt.registerTask("default", ["sass", "postcss:dist"])
-}
+    grunt.registerTask("default", ["sass", "postcss:dist"]);
+};
