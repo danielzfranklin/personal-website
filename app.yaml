@@ -8,7 +8,10 @@ handlers:
 - url: /s/(.+)
   static_files: static/\1
   upload: static/(.*)
-  
+
+- url: /api/(.+)
+  script: api.app
+
 - url: /(.*)
   static_files: static/pages/index.html
   upload: static/pages/index.html

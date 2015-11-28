@@ -16,6 +16,7 @@
                 
                 _this.data = {
                     name: "",
+                    email: "",
                     subject: "",
                     message: "",
                     // non form field data
@@ -26,7 +27,7 @@
                     if($scope.contactForm.$valid){
                         _this.attempt = "loading";
 
-                        $http.post("/api/contact.json", _this.data).then(function(){
+                        $http.post("/api/contact", _this.data).then(function(){
                             _this.send_succeed = true;
                             _this.attempt = "done";
                         },function(){
