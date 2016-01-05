@@ -1,28 +1,27 @@
 // content of standard page that ends up in the page content box
 .page_content_container
     position: relative
-    
+
 .page_content
     position: absolute
-    width: 100% // needed for the inner centering to work
-
+    z-index: 5
     // overlap with header
     top: -1 * $content_and_header_overlap_amount
-    z-index: 5
-    
+    width: 100% // needed for the inner centering to work
+
 .page_content_inner
+    // center
+    margin-right: auto
+    margin-left: auto
+
     width: 100%
     max-width: 700px
-    
-    // center
-    margin-left: auto
-    margin-right: auto
-    
+
     padding: 16px
-    
+
 .md-subheader
     padding-top: 10px
-    
+
     & &-inner
         padding-left: 0
     & &-content

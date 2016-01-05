@@ -1,9 +1,9 @@
 (function(){
     "use strict";
-    
+
     angular.module("danielzfranklin", ["ngSanitize", "ngMaterial", "ngRoute"])
         .config(["$mdThemingProvider", "$routeProvider", "$locationProvider", function($mdThemingProvider, $routeProvider, $locationProvider){
-            
+
         $routeProvider
         .when("/", {
             templateUrl: "static/pages/home/index.html"
@@ -16,10 +16,13 @@
         })
         .when("/contact", {
             templateUrl: "static/pages/contact/contact.html"
+        })
+        .when("/developer_gender", {
+            templateUrl: "static/pages/developer_gender/index.html"
         });
-            
+
         $locationProvider.html5Mode(true);
-        
+
         $mdThemingProvider.theme("default")
         .primaryPalette("indigo", {
             default: "500"
