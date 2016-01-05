@@ -1,3 +1,4 @@
 node_modules/
 .sass-cache/
 config.py
+static/styles/build/
