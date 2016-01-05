@@ -1,11 +1,6 @@
 module.exports = function(grunt){
-    
-    grunt.loadNpmTasks("grunt-contrib-sass");
-    grunt.loadNpmTasks("grunt-postcss");
-    grunt.loadNpmTasks("grunt-wiredep");
-    grunt.loadNpmTasks("grunt-contrib-watch");
-    grunt.loadNpmTasks("grunt-contrib-jshint");
-    
+    require("load-grunt-tasks")(grunt);
+
     grunt.initConfig({
         sass: {
             dist: {
@@ -32,12 +27,20 @@ module.exports = function(grunt){
             }
         },
         jshint: {
-            all: ["Gruntfile.js", "static/**/.js"]  
+            all: ["Gruntfile.js", "static/**/.js"]
         },
         wiredep: {
             target: {
                 src: "static/pages/index.html",
                 ignorePath: "../"
+            }
+        },
+        gae: {
+            deploy: {
+                action: "update"
+            },
+            run: {
+                action: "run"
             }
         },
         watch: {
@@ -54,6 +57,6 @@ module.exports = function(grunt){
             }
         }
     });
-    
+
     grunt.registerTask("default", ["sass", "postcss:dist", "jshint"]);
 };
