@@ -8,13 +8,21 @@ handlers:
 - url: /static/(.+)
   static_files: static/\1
   upload: static/(.*)
-  
+
 - url: /bower_components/(.+)
   static_files: bower_components/\1
   upload: bower_components/(.*)
 
 - url: /api/(.+)
   script: api.app
+
+- url: /developer_gender
+  static_files: developer_gender/index.html
+  upload: developer_gender/index.html
+
+- url: /developer_gender/(.+)
+  static_files: developer_gender/\1
+  upload: developer_gender/(.+)
 
 - url: /(.*)
   static_files: static/pages/index.html
