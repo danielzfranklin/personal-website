@@ -1,23 +1,24 @@
 {
   "name": "personal-website",
-  "description": "Daniel Franklin's Personal Website",
+  "description": "Daniel's personal website",
+  "main": "Gruntfile.js",
   "authors": [
     "Daniel Franklin"
   ],
   "license": "UNLICENSED",
+  "keywords": [
+    "personal"
+  ],
   "homepage": "https://github.com/danielzfranklin/personal-website",
-  "moduleType": [],
+  "moduleType": [
+    "es6"
+  ],
   "private": true,
-  "dependencies": {
-    "normalize-css": "normalize.css#~3.0.3",
-    "angular": "~1.4.8",
-    "angular-material": "~0.11.4",
-    "angular-route": "~1.4.8",
-    "angular-sanitize": "~1.4.8",
-    "google-material-color": "~1.2.6",
-    "sass-material-colors": "~0.0.5",
-    "roboto-googlefont": "*",
-    "roboto-webfont-bower": "roboto-webfont#~0.1.1",
-    "roboto-local": "*"
-  }
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
 }

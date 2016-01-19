@@ -1,8 +1,0 @@
-<section ng-controller="book_controller as book" class="individual_book" ng-show="book.data">
-    <img ng-src="{{ book.data.image }}" class="image">
-    <h2 class="title">{{ book.data.title }}</h2>
-    <h3 class="subtitle">{{ book.data.subtitle }}</h3>
-    <p>By {{ book.data.authors }}</p>
-    <p>{{ book.data.pages }} Pages. Published on {{ book.data.publishedDate }} by {{ book.data.publisher }}.</p>
-    <p class="description" ng-bind-html="book.data.description"></p>
-</section>
