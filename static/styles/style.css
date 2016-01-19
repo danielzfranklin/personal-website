@@ -244,3 +244,6 @@ footer {
 code {
     font-family: "Droid Sans Mono";
 }
+pre > code {
+    font-size: .85em;
+}
