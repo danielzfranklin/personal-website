@@ -65,7 +65,7 @@ def index_page():
             content = partial_content_regex.match(md[0])
             if content:  # there is something to cut off
                 content = content.group(1) +\
-                    "<a href=\"%s\">Continue ...</a>" % url
+                    "<a href=\"%s\">Continue...</a>" % url
             else:  # just take the entire thing
                 content = md[0]
 
