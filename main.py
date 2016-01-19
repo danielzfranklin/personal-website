@@ -54,18 +54,28 @@ def index_page():
 
     pages = []
     page_name_regex = re.compile("(.+)\.md$")
+    partial_content_regex = re.compile("^((?:\n|.)+)\
+<\!--(?: |)full(?: |_)content(?: |)-->", re.MULTILINE)
     for page_name in os.listdir("page/"):
         if page_name[0] != "_":
             md = parse_md_file("page/%s" % page_name)
+
             meta = md[1]
+            url = "/page/%s" % page_name_regex.match(page_name).group(1)
+            content = partial_content_regex.match(md[0])
+            if content:  # there is something to cut off
+                content = content.group(1) +\
+                    "<a href=\"%s\">Continue ...</a>" % url
+            else:  # just take the entire thing
+                content = md[0]
+
             pages.append({
-                "page_name": "/page/%s" %
-                page_name_regex.match(page_name).group(1),
+                "page_name": url,
                 "title": meta["title"][0],
                 "small_image": meta["image"][1] if "image" in meta and
                 len(meta["image"]) > 1 else False,
                 "order": meta["order"][0],
-                "content": md[0]
+                "content": content
             })
 
     def page_numberer(page):

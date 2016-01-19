@@ -10,6 +10,7 @@ written instead of dragged. For example:
 
     flag clicked:
         say("Hello World")
+<!-- full content -->
 
 Etch Code is much looser than most other languages to make it easier to learn.
 Capitalization and spaces are irrelevant, so flagclicked equals flagClicked
@@ -17,10 +18,12 @@ equals flag clicked equals FLAG CLICKED. The hope is to minimize some types of
 stupid syntax errors and keep what a person coming from Scratch must memorize to
 a minimum.
 
-Blocks that have other blocks inside of them are indented like in python.
+Blocks that have other blocks inside of them are indented like in python. If you
+want to use tabs, it's your loss. Just be consistent and only use either tabs or
+spaces (also just like python).
 
     flag clicked:
-        say("hi") # this line is indented one tab inwards
+        say("hi")
 
 Strings, integers, and functions are written just as they are in almost every written language
 
