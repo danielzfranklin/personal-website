@@ -237,3 +237,7 @@ footer {
     min-height: 1px;
   }
 }
+
+code {
+    font-family: "Droid Sans Mono";
+}
