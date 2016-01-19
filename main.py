@@ -85,9 +85,19 @@ def standard_page(path):
 
         md = parse_md_file(file_inside_folder("page", path + ".md"))
         content = md[0]
-        metadata = md[1]
 
-        return template.render(content=content, metadata=metadata)
+        p_strip_regex = re.compile("<p>(.+)</p>")
+        metadata = md[1]
+        md_ified_metadata = {}
+        for name, list_of_items in metadata.items():
+            md_ified_entry_list = []
+            for item in list_of_items:
+                md_ified_entry_list.append(
+                    p_strip_regex.match(parse_md(item)[0]).group(1)
+                )
+            md_ified_metadata[name] = md_ified_entry_list
+
+        return template.render(content=content, metadata=md_ified_metadata)
     except IOError:
         abort(404)
 

@@ -4,10 +4,15 @@
 {% block page_content %}
     <article>
         <header>
-            {% if 'image' in metadata and metadata.image[0] %}
+            {% if metadata.image %}
                 <img src="{{ metadata.image[0] }}">
             {% endif %}
             <h1>{{ metadata.title[0] }}</h1>
+            <aside>
+                {% if metadata.image_caption %}
+                    <p>{{ metadata.image_caption[0] }}</p>
+                {% endif %}
+            </aside>
         </header>
 
         <div>
