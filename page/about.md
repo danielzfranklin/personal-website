@@ -5,4 +5,4 @@ email: daniel@danielzfranklin.org
 order: top
 
 I'm Daniel, a high school student in Kensington, California. In my free time, I
-program websites. Contact me at daniel@danielzfranklin.org.
+program websites and read books.
