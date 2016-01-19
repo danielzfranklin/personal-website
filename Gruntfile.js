@@ -27,7 +27,7 @@ module.exports = function(grunt){
             }
         },
         jshint: {
-            all: ["Gruntfile.js", "static/**/.js"]
+            all: ["Gruntfile.js", "static/scripts/.js"]
         },
         wiredep: {
             target: {

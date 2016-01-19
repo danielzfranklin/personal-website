@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ metadata.title[0] }}{% endblock %}
+{% block page_content %}
+    <article>
+        <header>
+            {% if 'image' in metadata and metadata.image[0] %}
+                <img src="{{ metadata.image[0] }}">
+            {% endif %}
+            <h1>{{ metadata.title[0] }}</h1>
+        </header>
+
+        <div>
+            {{ content }}
+        </div>
+    </article>
+{% endblock %}

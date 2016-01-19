@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+{% block page_content %}
+    <sections>
+        <ul>
+            {% for page in pages %}
+                <li>
+                    <article>
+                        <header>
+                            {% if page.small_image %}
+                                <img src="{{ page.small_image }}">
+                            {% endif %}
+                            <h1><a href="{{ page.page_name }}">
+                                {{ page.title }}
+                            </a></h1>
+                        </header>
+                        <div>
+                            {{ page.content }}
+                        </div>
+                    </article>
+                </li>
+            {% endfor %}
+        </ul>
+    </sections>
+{% endblock %}

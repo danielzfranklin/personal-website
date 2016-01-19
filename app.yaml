@@ -16,14 +16,5 @@ handlers:
 - url: /api/(.+)
   script: api.app
 
-- url: /developer_gender
-  static_files: developer_gender/index.html
-  upload: developer_gender/index.html
-
-- url: /developer_gender/(.+)
-  static_files: developer_gender/\1
-  upload: developer_gender/(.+)
-
-- url: /(.*)
-  static_files: static/pages/index.html
-  upload: static/pages/index.html
+- url: /.*
+  script: main.app
