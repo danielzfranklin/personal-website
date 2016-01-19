@@ -95,6 +95,9 @@ def standard_page(path):
 @app.route("/project/<path:path>")
 def project_page(path):
     try:
+        if path[len(path) - 1] == "/":  # it is a folder:
+            path = path + "index.html"
+
         with open(file_inside_folder("project", path)) as text:
             filename = path.split("/")[len(path.split("/")) - 1]
             filename = "application/octet-stream" if filename is None\
