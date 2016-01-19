@@ -12,4 +12,4 @@ You can download the entire dataset yourself from [google
 drive](https://drive.google.com/file/d/0Bzd_CzYvUxE5U1NSWnA2SFVKX00/view) or
 [view some pie charts I made out of part of the data][charts].
 
-[charts]: /project/developer_gender
+[charts]: /project/developer_gender/
