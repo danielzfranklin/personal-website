@@ -7,13 +7,20 @@ body {
 }
 
 body > nav ul,
-main > section > ul, main > sections > ul, main > section > ol { list-style: none; }
+main > section > ul, main > sections > ul, main > section > ol {
+    list-style: none;
+    padding: 0;
+}
 nav ul { margin: auto; }
 nav li { list-style: none; display: inline; margin: 0 10px; }
 a { text-decoration: none; }
 a:hover {
   text-decoration: none;
   color: inherit;
+}
+
+main > sections p:first-of-type, main > sections > ul {
+    margin-top: 0;
 }
 
 body > header,
@@ -71,7 +78,8 @@ body > footer {
   padding: 0 15px;
 }
 body > main {
-    padding: 10px 0 0 0;
+    padding: 35px;
+    box-sizing: border-box;
 }
 
 body > nav {
@@ -236,7 +244,7 @@ footer {
   body > nav,
   body > footer {
     width: 100%;
-    margin-left: 1%;
+    margin-left: 0;
     min-height: 1px;
   }
 }

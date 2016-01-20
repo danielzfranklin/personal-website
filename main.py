@@ -44,7 +44,8 @@ env.globals = {
     "site_title": "Daniel Zachary Franklin",
     "about_image": about_md[1]["navigation_image"][0],
     "about_tagline": about_md[1]["tagline"][0],
-    "email": about_md[1]["email"][0]
+    "email": about_md[1]["email"][0],
+    "about_content": about_md[0]
 }
 
 
@@ -69,21 +70,21 @@ def index_page():
             else:  # just take the entire thing
                 content = md[0]
 
-            pages.append({
-                "page_name": url,
-                "title": meta["title"][0],
-                "small_image": meta["image"][1] if "image" in meta and
-                len(meta["image"]) > 1 else False,
-                "order": meta["order"][0],
-                "content": content
-            })
+            if ("post" in meta and meta["post"] == ["true"])\
+                    or "post" not in meta:  # only add it if it should be added
+                pages.append({
+                    "page_name": url,
+                    "title": meta["title"][0],
+                    "small_image": meta["image"][1] if "image" in meta and
+                    len(meta["image"]) > 1 else False,
+                    "order": meta["order"][0] if "order" in meta else False,
+                    "content": content,
+                    "meta": meta
+                })
 
-    def page_numberer(page):
-        if page["order"] == "top":
-            return -float("inf")
-        else:
-            return -int(page["order"])
-    pages.sort(key=page_numberer)
+    def post_orderer(page):
+        return -int(page["order"])
+    pages.sort(key=post_orderer)
 
     return template.render(pages=pages)
 
