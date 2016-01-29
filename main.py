@@ -128,3 +128,19 @@ def project_page(path):
     except IOError as e:
         print(str(e))
         abort(404)
+
+@app.route("/private/<path:path>")
+def private_page(path):
+    try:
+        if path[len(path) - 1] == "/":  # it is a folder:
+            path = path + "index.html"
+
+        with open(file_inside_folder("private", path)) as text:
+            filename = path.split("/")[len(path.split("/")) - 1]
+            filename = "application/octet-stream" if filename is None\
+                else filename
+            return Response(text.read(),
+                            mimetype=mimetypes.guess_type(filename)[0])
+    except IOError as e:
+        print(str(e))
+        abort(404)
