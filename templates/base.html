@@ -9,6 +9,7 @@
 
         <link rel="stylesheet" href="/static/styles/fonts.css">
         <link rel="stylesheet" href="/static/styles/style.css">
+        <link rel="stylesheet" href="/static/styles/abstract.css">
     </head>
     <body>
         <header>
@@ -17,5 +18,8 @@
         <main>
             {% block page_content %}{% endblock %}
         </main>
+
+        <script src="/static/scripts/abstract.js"></script>
+        <script>new AbstractAnimation(document.querySelector("main"));</script>
     </body>
 </html>

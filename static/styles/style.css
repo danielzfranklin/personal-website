@@ -6,6 +6,10 @@ body {
   margin: 0;
 }
 
+body > main.abstract-container {
+  min-height: 100%;
+}
+
 body > nav ul,
 main > section > ul, main > sections > ul, main > section > ol {
     list-style: none;
